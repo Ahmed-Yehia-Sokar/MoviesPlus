@@ -76,7 +76,19 @@ extension ListMoviesViewController: UISearchBarDelegate {
 
 extension ListMoviesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let mediaItem = listMoviesViewModel.getMediaItem(atIndexPath: indexPath)
+        let mediaType = listMoviesViewModel.getMediaType(mediaItem: mediaItem)
+
+        if mediaType != .adBanner {
+            if let selectedMovie = listMoviesViewModel.map(mediaItem: mediaItem) {
+                if let displayMovieDetailsVC = storyboard?.instantiateViewController(withIdentifier: "DisplayMovieDetailsViewController") as? DisplayMovieDetailsViewController{
+                    let displayMovieDetailsVM = DisplayMovieDetailsViewModel(selectedMovie: selectedMovie)
+                    
+                    displayMovieDetailsVC.initViewController(withViewModel: displayMovieDetailsVM)
+                    navigationController?.pushViewController(displayMovieDetailsVC, animated: true)
+                }
+            }
+        }
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

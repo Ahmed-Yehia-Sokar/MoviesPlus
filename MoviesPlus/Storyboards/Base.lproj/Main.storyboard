@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tko-gJ-dRT">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="1JB-fQ-eBi">
-                                <rect key="frame" x="0.0" y="59" width="393" height="50"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="WaP-QW-xgq"/>
                                 </constraints>
@@ -27,7 +27,7 @@
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="clL-Gu-9P6">
-                                <rect key="frame" x="0.0" y="109" width="393" height="709"/>
+                                <rect key="frame" x="0.0" y="153" width="393" height="665"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AdBannerTableCell" rowHeight="60" id="h5s-vI-95W" customClass="AdBannerTableCell" customModule="MoviesPlus" customModuleProvider="target">
@@ -81,10 +81,10 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9A-5d-A9F" userLabel="Empty View">
-                                <rect key="frame" x="0.0" y="109" width="393" height="709"/>
+                                <rect key="frame" x="0.0" y="153" width="393" height="665"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQB-Po-2sF">
-                                        <rect key="frame" x="153" y="344.33333333333331" width="87.333333333333314" height="20.333333333333314"/>
+                                        <rect key="frame" x="153" y="322.33333333333331" width="87.333333333333314" height="20.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -97,7 +97,7 @@
                                 </constraints>
                             </view>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="13S-8c-gEX">
-                                <rect key="frame" x="178" y="420" width="37" height="37"/>
+                                <rect key="frame" x="178" y="442" width="37" height="37"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iko-qX-15u"/>
@@ -118,6 +118,7 @@
                             <constraint firstItem="clL-Gu-9P6" firstAttribute="leading" secondItem="iko-qX-15u" secondAttribute="leading" id="z5S-CL-UKs"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="GXx-YN-AjR"/>
                     <connections>
                         <outlet property="activityIndicatorView" destination="13S-8c-gEX" id="8rz-Uf-G8r"/>
                         <outlet property="emptyView" destination="a9A-5d-A9F" id="p9U-Wn-05w"/>
@@ -127,12 +128,60 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="94" y="-34"/>
+            <point key="canvasLocation" x="1020.6106870229007" y="-34.507042253521128"/>
+        </scene>
+        <!--Display Movie Details View Controller-->
+        <scene sceneID="KYN-Ho-mpR">
+            <objects>
+                <viewController storyboardIdentifier="DisplayMovieDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QMN-Yr-ycY" customClass="DisplayMovieDetailsViewController" customModule="MoviesPlus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QyV-wL-rvh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-image" translatesAutoresizingMaskIntoConstraints="NO" id="PLV-Y3-ZJm">
+                                <rect key="frame" x="16" y="138.66666666666663" width="361" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PQM-ve-UZj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PLV-Y3-ZJm" firstAttribute="centerX" secondItem="PQM-ve-UZj" secondAttribute="centerX" id="5L1-MV-OMA"/>
+                            <constraint firstItem="PLV-Y3-ZJm" firstAttribute="leading" secondItem="PQM-ve-UZj" secondAttribute="leading" constant="16" id="8nv-2U-KtV"/>
+                            <constraint firstItem="PQM-ve-UZj" firstAttribute="trailing" secondItem="PLV-Y3-ZJm" secondAttribute="trailing" constant="16" id="DVY-zU-p7k"/>
+                            <constraint firstItem="PLV-Y3-ZJm" firstAttribute="centerY" secondItem="PQM-ve-UZj" secondAttribute="centerY" id="NbX-C3-Olr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="coverImageView" destination="PLV-Y3-ZJm" id="VVe-aM-JaI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nea-IS-wsX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1834.3511450381679" y="-34.507042253521128"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="27N-tg-XPQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tko-gJ-dRT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MJz-jr-IeW">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="f6G-kC-owG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Olu-4L-T0K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.89312977099236" y="-34.507042253521128"/>
         </scene>
     </scenes>
     <resources>
         <image name="Placeholder Image" width="120" height="120"/>
         <image name="ad-banner" width="1944" height="828"/>
+        <image name="placeholder-image" width="800" height="600"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
