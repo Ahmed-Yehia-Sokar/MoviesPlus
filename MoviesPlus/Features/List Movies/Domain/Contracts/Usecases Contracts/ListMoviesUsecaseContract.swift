@@ -10,6 +10,6 @@ import Foundation
 protocol ListMoviesUsecaseContract {
     func getMovies(forQuery query: String,
                    page: Int,
-                   completionHandler: @escaping ([Movie]) -> Void,
+                   completionHandler: @escaping ([MediaItem]) -> Void,
                    errorHandler: @escaping (String) -> Void)
 }

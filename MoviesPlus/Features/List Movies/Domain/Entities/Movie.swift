@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Movie {
+struct Movie: MediaItem {
     // MARK: - properties
     let id: String,
         owner: String,
@@ -19,4 +19,7 @@ struct Movie {
         isFriend: Int,
         isFamily: Int,
         imageUrl: String
+    var mediaType: MediaType {
+        .movie
+    }
 }
